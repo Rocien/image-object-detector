@@ -1,0 +1,290 @@
+/*----- MediaPipe CSS STYLING -----*/
+@use "@material";
+
+em {
+  font-weight: bold;
+}
+
+video {
+  clear: both;
+  display: block;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+section {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.mdc-button.mdc-button--raised.removed {
+  display: none;
+}
+
+.invisible {
+  opacity: 0.2;
+}
+
+.videoView,
+.detectOnClick {
+  position: relative;
+  float: left;
+  width: 48%;
+  margin: 2% 1%;
+  cursor: pointer;
+}
+
+.detectOnClick p {
+  position: absolute;
+  padding: 5px;
+  background-color: #007f8b;
+  color: #fff;
+  border: 1px dashed rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+  margin: 0;
+}
+
+.videoView p {
+  position: absolute;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #007f8b;
+  color: #fff;
+  border: 1px dashed rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+  margin: 0;
+}
+
+.highlighter {
+  background: rgba(0, 255, 0, 0.25);
+  border: 1px dashed #fff;
+  z-index: 1;
+  position: absolute;
+}
+
+.detectOnClick {
+  z-index: 0;
+}
+
+.detectOnClick img {
+  width: 100%;
+}
+/*----- MediaPipe CSS STYLING ENDS HERE-----*/
+
+
+
+
+/* ----- CSS RESET START FROM HERE----------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html {
+  line-height: 1.5;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  margin: 0;
+  background-color: black;
+}
+
+/* Update default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0 0 1.5rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+  color: #36BF7F;
+}
+
+a:hover,
+a:focus-visible {
+  color: #D96666;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Containers ---------- */
+
+.container {
+  width: min(65em, 100%);
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+
+}
+
+.container--text {
+  width: min(45em, 100%);
+}
+
+/* CSS RESET ENDS HERE */
+.btn {
+    /* common styles */
+    display: inline-block;
+    padding: 1rem;
+    background-color: #394a59;
+    border: 0.125em solid #394a59;
+    color: #fff;
+    border-radius: 0.25em;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+  
+    /* links necessary styles */ 
+    text-decoration: none;
+  
+    /* button necessary styles */ 
+    cursor: pointer;
+    font-size: inherit; 
+    font-family: inherit;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background-color: #59758d;
+    border-color: #59758d;
+    color: #fff;
+  }
+
+.search-bar {
+    background: linear-gradient(to right, rgb(70, 21, 155), rgb(143, 51, 158));
+    color: #fff;
+}
+
+.title {
+    padding-right: 5rem;
+    font-size: 6rem;
+    font-weight: lighter;
+}
+
+
+#searchBox {
+    display: none;
+    position: fixed;
+    padding-top: 5rem;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(36, 35, 35, 0.4);
+    color: #fff;
+}
+.modal-content {
+    background-color: #373636;
+    color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.btn-box {
+    background-color: #373636;
+    color: #fff;
+}
+
+#searchOutput {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+#dialog {
+    color: #fff ;
+    background-color: #373636;
+}
+
+#savedDialog {
+  color: #fff ;
+  background-color: #373636;
+}
+
+#searchOutput__text {
+  color: #fff;
+}
